@@ -8,10 +8,12 @@ import {
   leadership,
   skills,
   getInTouch,
-  experiences
+  experiences,
+  projectsSection
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
+import ProjectsSection from './components/home/ProjectsSection';
 import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -41,6 +43,9 @@ const Home = React.forwardRef((props, ref) => {
           imgSize={about.imageSize}
           resume={about.resume}
         />
+      )}
+      {projectsSection.show && (
+        <ProjectsSection projectsSection={projectsSection} />
       )}
       {
         experiences.show && (

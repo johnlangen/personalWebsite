@@ -20,25 +20,38 @@ code {
     monospace;
 }
 
-.bgstyle {
-  /* background: linear-gradient(136deg, #1ad7c0, #8E44AD, #ff9b11, #1F3A93, #ddd8c6, #000000, #000000);  */
-  /*background: linear-gradient(
-    136deg,
-    #4484ce,
-    #1ad7c0,
-    #ff9b11,
-    #9b59b6,
-    #ff7f7f,
-    #ecf0f1
-  );*/
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-  background-size: 1200% 1200%;
-  -webkit-animation: BackgroundAnimation 70s ease infinite;
-  -moz-animation: BackgroundAnimation 70s ease infinite;
-  -o-animation: BackgroundAnimation 70s ease infinite;
-  animation: BackgroundAnimation 70s ease infinite;
+.bgstyle {
+  background: radial-gradient(
+    circle,
+    #5C6BC0 0%,
+    #3F51B5 20%,
+    #3949AB 40%,
+    #6A1B9A 60%,
+    #6e0916 80%,
+    #880E4F 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 30s ease infinite;
   height: 100%;
 }
+
+
+
+
+
+
 
 .bg-gradient {
   background: linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
